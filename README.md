@@ -2,7 +2,7 @@
 
 You have been provided with a complete API that returns an array of successful SpaceX launches.
 
-Pagination is already handled for you in app.js
+Pagination is already handled for you in app.js, this can be enhanced if you wish
 
 Currently, the app displays the following:
 
@@ -12,7 +12,7 @@ Your task is to style this information in whatever way you feel.  Have fun and s
 
 ### Restrictions!
 
- - MaterialUI, momentJS and your own CSS and JS skills are all you can use
+ - MaterialUI, momentJS, moment-timezone and your own CSS and JS skills are all you can use
  - Do not play with the API call - data is the data!
  - Do not spend more than 3 hours on this
 
