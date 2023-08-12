@@ -24,10 +24,26 @@
 
 .launchCopy{
     padding: 10px 20px;
+    overflow-y: scroll;
 }
 
 .launchTitle{
     font-weight: bold;
     font-size: large;
     text-align: center;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 400px){
+    .launchContainer {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .launchImageContainer {
+        height: 50vw;
+    }
 }

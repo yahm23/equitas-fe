@@ -1,10 +1,7 @@
-import { modalControl } from '../../customJS'
 import styles from './launch.module.css'
 import moment from 'moment'
 
 const Launch = ({props}) => {
-    modalControl()
-
     const backgroundClass = props.rocket.flickr_images.length ? {
         backgroundImage: `url("${props.rocket.flickr_images[Math.floor(Math.random() * props.rocket.flickr_images.length)]}")`,
     } :
@@ -20,21 +17,33 @@ const Launch = ({props}) => {
                 </div>
                 <div className={styles.launchCopy}>
                     <p className={styles.launchTitle}>{props.name}</p>
-                    {/* <p>Id: {props.id}</p> */}
-                    <p>Flight Number: {props.flight_number}</p>
-                    <p>Launch Date: {moment(props.date_utc).format('MMMM Do YYYY, h:mm:ss a')}</p>
+                    <p><b>Flight Number:</b> {props.flight_number}</p>
+                    <p><b>Launch Date:</b> {moment(props.date_utc).format('MMMM Do YYYY, h:mm:ss a')}</p>
                 </div>
             </div>
             <div id={props.id} className={`${styles.launchContainer} hidden`}>
-                <div className={styles.launchImageContainer}>
+                <div className={`${styles.launchImageContainer} launchImageContainer `}>
                     <div role="img" alt={props.rocket.flickr_images.length ? props.rocket.name : "Fallback SpaceX logo"} style={backgroundClass} className={styles.launchImage}/>
                 </div>
                 <div className={styles.launchCopy}>
                     <p className={styles.launchTitle}>{props.name}</p>
-                    {/* <p>Id: {props.id}</p> */}
-                    <p>Flight Number: {props.flight_number}</p>
-                    <p>Launch Date: {moment(props.date_utc).format('MMMM Do YYYY, h:mm:ss a')}</p>
-                    <button className="closeButton" >Close</button>
+                    <p><b>ID:</b> {props.id}</p>
+                    <p><b>Flight Number:</b> {props.flight_number}</p>
+                    <p><b>Launch Date:</b> {moment(props.date_utc).format('MMMM Do YYYY, h:mm:ss a')}</p>
+                    <p><b>Rocket description:</b> {props.rocket.description}</p>
+                    <p><b>Launchpad details:</b> {props.launchpad.details}</p>
+                </div>
+                <div className={styles.buttonContainer}>
+                    { props.links.article ? 
+                        (
+                            <a className="button" target="_blank" href={props.links.article}>Read more</a>
+                        )
+                        :
+                        (
+                            <div></div>
+                        )
+                    }
+                    <button className="button closeButton" >Close</button>
                 </div>
             </div>
 

@@ -2,6 +2,7 @@ import './App.css';
 import {useState, useEffect} from "react";
 import Launches from "./components/Launches";
 import {Button, Container} from "@mui/material";
+// import { modalControl } from './customJS';
 
 function App() {
 
@@ -130,14 +131,16 @@ function App() {
 
 
             <Container>
-                <p>Total Launches: {data["totalDocs"]}</p>
+                <p className='launchesContent'>Total Launches: {data["totalDocs"]}</p>
                 {data["docs"] ? (
-                    <div>
+                    <div >
                         <Launches launches={data["docs"]}/>
-                        <p>Page {data["page"]} / {data["totalPages"]} </p>
-                        <Button variant="outlined" onClick={prevPage} disabled={currentPage === 1}>Prev Page</Button>
-                        <Button variant="outlined" onClick={nextPage} disabled={currentPage === data["totalPages"]}>Next
-                           Page</Button>
+                        <p className='launchesContent'>Page {data["page"]} / {data["totalPages"]} </p>
+                        <div className='launchesContent'>
+                            <Button variant="outlined" onClick={prevPage} disabled={currentPage === 1}>Prev Page</Button>
+                            <Button variant="outlined" onClick={nextPage} disabled={currentPage === data["totalPages"]}>Next
+                            Page</Button>
+                        </div>
 
                    </div>
                 ) : (
