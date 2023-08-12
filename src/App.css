@@ -19,6 +19,15 @@ button, body{
   text-align: center;
 }
 
+.header > h1 {
+  font-size: 6rem;
+}
+@media screen and (max-width: 500px){
+  .header > h1 {
+    font-size: 2rem;
+  }
+}
+
 .launchModal{
   position: fixed;
   right: 0;
@@ -53,11 +62,13 @@ button, body{
 }
 
 .launchesContent{
-  text-align: center;
   padding: 10px 0;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
 }
 
-.button {
+.button, button {
   text-decoration: none;
   cursor: pointer;
   background-color: #282828;

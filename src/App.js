@@ -2,7 +2,6 @@ import './App.css';
 import {useState, useEffect} from "react";
 import Launches from "./components/Launches";
 import {Button, Container} from "@mui/material";
-// import { modalControl } from './customJS';
 
 function App() {
 
@@ -128,9 +127,10 @@ function App() {
     return (
         <div>
             <div className='overlay hidden'></div>
-
-
             <Container>
+                <div className='header'>
+                    <h1>SpaceX Launches</h1>
+                </div>
                 <p className='launchesContent'>Total Launches: {data["totalDocs"]}</p>
                 {data["docs"] ? (
                     <div >

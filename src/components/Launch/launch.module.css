@@ -5,6 +5,7 @@
     color: #282828;
     overflow: hidden;
     cursor: pointer;
+    overflow-y: scroll;
 }
 
 .launchContainer:hover > .launchImageContainer > .launchImage {
@@ -24,7 +25,6 @@
 
 .launchCopy{
     padding: 10px 20px;
-    overflow-y: scroll;
 }
 
 .launchTitle{
