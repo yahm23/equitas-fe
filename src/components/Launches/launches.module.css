@@ -1,6 +1,7 @@
-.page{
-    height: 150px;
-    width:350px;
+.page {
     text-align: center;
-    padding-top: 10px;
+}
+
+.launches {
+    gap: 40px;
 }
