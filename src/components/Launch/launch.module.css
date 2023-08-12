@@ -4,6 +4,7 @@
     background-color: #FAFAF8;
     color: #282828;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .launchContainer:hover > .launchImageContainer > .launchImage {
