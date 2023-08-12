@@ -1,3 +1,16 @@
+html{
+  background: rgb(18,19,21);
+  background: radial-gradient(circle, rgba(18,19,21,0.9066001400560224) 0%, rgba(25,24,34,0.9682247899159664) 100%);
+}
+
+body{
+  height: 100vh;
+}
+
+button, body{
+  color: #FEFEFE;
+}
+
 .App {
   text-align: center;
 }
