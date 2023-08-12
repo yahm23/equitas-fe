@@ -1,5 +1,32 @@
+.launchContainer {
+    width: 350px;
+    border-radius: 20px;
+    background-color: #FAFAF8;
+    color: #282828;
+    overflow: hidden;
+}
+
+.launchContainer:hover > .launchImageContainer > .launchImage {
+    transform: scale(108%);
+}
+
+.launchImageContainer {
+    overflow: hidden;
+    height: 200px;
+}
+
+.launchImage {
+    background-size: cover;
+    height: 100%;
+    transition: 0.2s transform ease-in-out;
+}
+
+.launchCopy{
+    padding: 10px 20px;
+}
 
 .launchTitle{
     font-weight: bold;
     font-size: large;
+    text-align: center;
 }
